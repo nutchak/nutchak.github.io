@@ -25,7 +25,7 @@ function AnimatedRoute() {
 
 	return (
 		<Routes location={location} key={location.key}>
-			<Route path="/" element={<FrontPage />} />
+			<Route index element={<FrontPage />} />
 			<Route path="/home" element={<Home />} />
 			<Route path="/education" element={<Education />} />
 			<Route path="/projects" element={<Projects />} />
