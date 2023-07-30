@@ -6,11 +6,12 @@ import Layout from '../components/Layout';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
 import ContentBox from '../components/ContentBox';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 function Home() {
 	return (
 		/* Background */
-		<motion.div
+		<AnimatedBackground
 			initial={{ y: '100vh' }}
 			animate={{ y: '0vh' }}
 			transition={{ duration: 1, ease: circOut }}
@@ -27,7 +28,7 @@ function Home() {
 
 				<ContentBox />
 			</div>
-		</motion.div>
+		</AnimatedBackground>
 	);
 }
 export default Home;

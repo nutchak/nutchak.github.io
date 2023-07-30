@@ -10,11 +10,12 @@ import AnimatedTextWord from '../scripts/AnimatedTextWord';
 import AnimatedTextCharacter from '../scripts/AnimatedTextCharacter';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 function FrontPage() {
 	const isPresent = useIsPresent();
 	return (
-		<motion.div
+		<AnimatedBackground
 			initial={false}
 			animate={{ y: '0vh' }}
 			transition={{ duration: 1, ease: circOut }}
@@ -27,7 +28,7 @@ function FrontPage() {
 					<Button page="/home" text="Welcome!" />
 				</motion.button>
 			</div>
-		</motion.div>
+		</AnimatedBackground>
 	);
 }
 

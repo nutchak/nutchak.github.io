@@ -5,11 +5,12 @@ import NavBar from '../components/NavBar';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
 import ContentBox from '../components/ContentBox';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const Education = () => {
 	return (
 		/* Background */
-		<motion.div
+		<AnimatedBackground
 			initial={{ y: '100vh' }}
 			animate={{ y: '0vh' }}
 			transition={{ duration: 1, ease: circOut }}
@@ -26,7 +27,7 @@ const Education = () => {
 
 				<ContentBox />
 			</div>
-		</motion.div>
+		</AnimatedBackground>
 	);
 };
 
