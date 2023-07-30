@@ -3,11 +3,10 @@ import { circOut, motion } from 'framer-motion';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
 import ContentBox from '../components/ContentBox.jsx';
-import AnimatedBackground from '../components/AnimatedBackground';
 
 const Projects = () => {
 	return (
-		<AnimatedBackground
+		<motion.div
 			initial={{ y: '100vh' }}
 			animate={{ y: '0vh' }}
 			transition={{ duration: 1, ease: circOut }}
@@ -60,7 +59,7 @@ const Projects = () => {
 					</p>
 				</div>
 			</div>
-		</AnimatedBackground>
+		</motion.div>
 	);
 };
 

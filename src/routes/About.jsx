@@ -3,17 +3,17 @@ import React from 'react';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
 import ContentBox from '../components/ContentBox.jsx';
-import AnimatedBackground from '../components/AnimatedBackground';
 
 function About() {
 	return (
 		/* Background */
-		<AnimatedBackground
-            initial={{ y: '100vh' }}
-            animate={{ y: '0vh' }}
-            exit={{ y: '100vh', opacity: 1 }}
-            className="left-0 top-0 m-0 flex items-center justify-center bg-DarkVanilla p-0 h-screen"
-        >
+		<motion.div
+			initial={{ y: '100vh' }}
+			animate={{ y: '0vh' }}
+			transition={{ duration: 1, ease: circOut }}
+			exit={{ y: '100vh', opacity: 1 }}
+			className="left-0 top-0 m-0 flex items-center justify-center bg-DarkVanilla p-0 h-screen"
+		>
 			{/* Card */}
 			<div
 				id="card"
@@ -24,7 +24,7 @@ function About() {
 
 				<ContentBox />
 			</div>
-		</AnimatedBackground>
+		</motion.div>
 	);
 }
 
