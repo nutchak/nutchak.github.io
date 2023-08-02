@@ -39,6 +39,8 @@ export default function ContentBox() {
 						transition={{ duration: 0.2 }}
 						className="p-6 font-mono text-2xl"
 					>
+						{selectedTab ? selectedTab.degreeName : '😋'}
+						{selectedTab ? selectedTab.degreeInformation : '😋'}
 						{selectedTab ? selectedTab.degreeText : '😋'}
 					</motion.div>
 				</AnimatePresence>
