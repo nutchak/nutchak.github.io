@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-	BrowserRouter,
+	BrowserRouter as Router,
 	Route,
-	Router,
 	Routes,
 	useLocation,
 } from 'react-router-dom';
@@ -41,12 +40,12 @@ function AnimatedRoute() {
 export default function App({ Components, pageProps }) {
     return (
         <div className="w-full h-screen overflow-hidden">
-            <BrowserRouter>
+            <Router>
                 <NavBar />
                 <LocationProvider>
                     <AnimatedRoute />
                 </LocationProvider>
-            </BrowserRouter>
+            </Router>
         </div>
     );
 }
