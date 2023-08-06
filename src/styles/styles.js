@@ -1,4 +1,7 @@
 const styles = {
+	page: 'flex items-center justify-center xl:mx-24 xl:my-36',
+
+	app: 'w-full h-screen overflow-hidden',
 	boxWidth: 'xl:max-w-[1280px] w-full',
 
 	background:
@@ -12,6 +15,11 @@ const styles = {
 	flexCenter: 'flex justify-center items-center',
 	flexStart: 'flex justify-center items-start',
 
+	/**
+	 * Mobile: x-6 y-4
+	 * Tablet: x-10 y-6
+	 * Desktop: x-16 y-12
+	 */
 	paddingX: 'sm:px-16 px-6',
 	paddingY: 'sm:py-16 py-6',
 	padding: 'sm:px-16 px-6 sm:py-12 py-4',

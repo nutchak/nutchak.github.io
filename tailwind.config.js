@@ -4,11 +4,41 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				/* 1 */
+				Azalea: '#F2B3D6',
+				Perano: '#B7AEF2',
+				Eucalyptus: '#238C6E',
+				Shamrock: '#2BD999',
+				Pampas: '#F2EEEB',
+
+				/* 2 */
+				VanillaIce: '#F2D5E8',
+				LilacBush: '#9E82D9',
+				MoonRaker: '#C7B3F2',
+				Iceberg: '#D8F0F2',
+				Corn: '#F2B705',
+
+				/* 3 */
+				Azalea3: '#F2B3D1',
+				Cerulean: '#11A0D9',
+				Observatory: '#048C66',
+				Turbo: '#F2E205',
+				Corn3: '#F2B705',
+
+				/* 4 */
 				Illusion: '#F291D0',
 				CeruleanBlue: '#323AD9',
 				CaribbeanGreen: '#04D99D',
 				ButterCup: '#F2B90C',
 				Trinidad: '#F24405',
+
+				/* 5 */
+				Concrete: '#F2F2F2',
+				Alto: '#D9D9D9',
+				Grey: '#8C8C8C',
+				MineShaft: ' #262626',
+				CodGrey: '#0D0D0D',
+
 				CornFlowerBlue: '#417CF2',
 				CornFlowerBlueLight: '#6393F2',
 				Portica: '#F2E963',
@@ -37,46 +67,53 @@ module.exports = {
 				Plantation: '#2b5f4b',
 				SilverChalice: '#B0B0B0',
 				WoodSmoke: '#101214',
+
+				'text-l': '#010e14',
+				'background-l': '#ffffff',
+				'primary-l': '#6a84fb',
+				'secondary-l': '#fdc5aa',
+				'accent-l': '#d6b005',
+
+				'text-d': '#ffffff',
+				'background-d': '#010e14',
+				'primary-d': '#6a84fb',
+				'secondary-d': '#0e0500',
+				'accent-d': '#fce478',
+
+				/*
 				'text-l': '#021d22',
 				'background-l': '#fafeff',
 				'primary-l': '#d1280a',
 				'secondary-l': '#c8f5fc',
 				'accent-l': '#ee2e0c',
-				"text-d": '#fafeff',
-				"background-d": '#021d22',
-				"primary-d": '#d1280a',
-				"secondary-d": '#02242a',
-				"accent-d": '#faa899',
+				'text-d': '#fafeff',
+				'background-d': '#021d22',
+				'primary-d': '#d1280a',
+				'secondary-d': '#02242a',
+				'accent-d': '#faa899',
+				*/
 			},
 			screens: {
-				xs: '480px',
+				xs: '480px' /* Mobile */,
 				ss: '620px',
-				sm: '768px',
-				md: '1060px',
+				sm: '768px' /* Tablet -> */,
+				md: '1060px' /* Desktop */,
 				lg: '1200px',
 				xl: '1700px',
 			},
 			fontSize: {
-				fonts: '1rem',
-				fontm: '1.5rem',
-				fontl: '2rem',
-				fontxl: '2.5rem',
-				heading: '5rem',
-				subheading: '3rem',
-				display: '8rem',
-				nav: '2rem',
+				title: '2rem',
+				body: '1rem',
+				small: '0.75rem',
+				display: '10rem',
 			},
 			fontFamily: {
-				Nunito: ['Nunito Sans', 'sans-serif'],
-				RobotoSlab: ['Roboto Slab', 'serif'],
-				RobotoMono: ['Roboto Mono', 'monospace'],
-				AbrilFatFace: ['Abril Fatface', 'cursive'],
-				Staatliches: ['Staatliches', 'cursive'],
-				Unbounded: ['Unbounded', 'cursive'],
-				PlayFair: ['Playfair Display', 'serif'],
-				NotoSerif: ['Noto Serif', 'serif'],
-				Inter: ['Inter', 'sans-serif'],
-				OpenSans: ['Open Sans', 'sans-serif'],
+				sans: ['Montserrat', 'sans-serif'],
+				serif: ['Roboto Slab', 'serif'],
+				display: ['Abril Fatface', 'cursive'],
+				mono: ['Roboto Mono', 'monospace'],
+				inter: ['Inter', 'sans-serif'],
+				staatliches: ['Staatliches', 'cursive'],
 			},
 			boxShadow: {
 				nav: '20px solid #000',

@@ -1,52 +1,85 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Route,
 	Routes,
 	useLocation,
+	NavLink,
+	BrowserRouter,
 } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './routes/Home';
-import Education from './routes/Education';
+
 import Projects from './routes/Projects';
 import About from './routes/About';
 import Contact from './routes/Contact';
-import FrontPage from './routes/FrontPage';
+
 import { BackgroundColorProvider } from './contexts/BackgroundColorContext';
+import Card from './components/Card';
+import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai';
+import { Footer } from './routes/Footer';
+
+import { useRouteError } from 'react-router-dom';
+import CustomCursor from './components/CustomCursor';
 
 function LocationProvider({ children }) {
 	return <AnimatePresence>{children}</AnimatePresence>;
 }
 
-function AnimatedRoute() {
-	const location = useLocation();
-
-	return (
-		<BackgroundColorProvider>
+/**
+ * <BackgroundColorProvider>
 			<Routes location={location} key={location.key}>
 				<Route index element={<FrontPage />} />
-				<Route path="/home" element={<Home />} />
+				<Route index element={<Home />} />
 				<Route path="/education" element={<Education />} />
 				<Route path="/projects" element={<Projects />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
 		</BackgroundColorProvider>
+ */
+
+/* function AnimatedRoute() {
+	const location = useLocation();
+
+	return (
+		<BrowserRouter>
+			<Routes location={location} key={location.key}>
+				<Route index element={<FrontPage />} />
+				<Route index element={<Home />} />
+				<Route path="/education" element={<Education />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="*" element={<Error />} />
+			</Routes>
+		</BrowserRouter>
+	);
+
+	<Home />
+			<About />
+			<Projects />
+			<Contact />
+			<Footer />
+} */
+
+export default function App() {
+	const location = useLocation();
+
+	return (
+		<>
+			<div className="flex w-full flex-col items-center bg-CodGrey text-Concrete">
+				{/* <CustomCursor /> */}
+				<NavBar />
+				<Routes location={location} key={location.key}>
+					<Route index path="/" element={<Home />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes>
+			</div>
+		</>
 	);
 }
-
-export default function App({ Components, pageProps }) {
-    return (
-        <div className="w-full h-screen overflow-hidden">
-            <Router>
-                <NavBar />
-                <LocationProvider>
-                    <AnimatedRoute />
-                </LocationProvider>
-            </Router>
-        </div>
-    );
-}
-
