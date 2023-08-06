@@ -8,10 +8,10 @@ export default function ContentBox() {
 	return (
 		<div
 			id="content"
-			className=" my-6 w-5/6 border-2 border-gray-500 bg-white p-4"
+			className=" bg-white"
 		>
 			<nav id="content-nav" className="bg-Deco ">
-				<ul className="m-0 grid grid-cols-2 justify-items-center border-2 border-black p-0">
+				<ul className="m-0 grid grid-cols-2 justify-items-center p-0">
 					{degreeData.map((degree) => (
 						<li
 							key={degree.degreeName}
@@ -37,7 +37,7 @@ export default function ContentBox() {
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: -10, opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="p-6 font-mono text-2xl"
+						className="font-mono text-2xl"
 					>
 						{selectedTab ? selectedTab.degreeName : '😋'}
 						{selectedTab ? selectedTab.degreeInformation : '😋'}

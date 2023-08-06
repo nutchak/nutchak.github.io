@@ -7,21 +7,14 @@ import Card from '../components/Card.jsx';
 import '../App.css';
 import '.././assets/github-mark.svg';
 import ReactPlayer from 'react-player';
+import { AiFillGithub } from 'react-icons/ai';
 
 const colorClassMap = {
 	Deco: 'bg-Deco',
 };
 
-/**
- * 
- * @returns 
- */
-const Projects = () => {
+/*
 
-	/* 
-	* Set selected tab
-	* Initialy set to the first project in the array
-	*/
 	const [selectedTab, setSelectedTab] = useState(projectsData[0]);
 
 	return (
@@ -32,7 +25,7 @@ const Projects = () => {
 			className={`${styles.background} bg-background-l`}
 		>
 			TODO: Change the name to contentbox (or better name that describes the component)
-			{/* Card */} 
+
 			<Card
 				title="projects"
 				color="bg-white"
@@ -102,6 +95,84 @@ const Projects = () => {
 				}
 			/>
 		</AnimatedBackground>
+
+ */
+
+const Projects = () => {
+	const [selectedTab, setSelectedTab] = useState(projectsData[0]);
+	return (
+		<div className="flex flex-col items-center justify-center font-sans py-36">
+			<motion.p
+				initial={`text: self-start`}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ duration: 9 }}
+				className="self-end font-staatliches text-9xl"
+			>
+				Projects
+			</motion.p>
+			<motion.div
+				id="about-wrapper"
+				className="w-4/5 flex flex-col items-center justify-center bg-ButterCup font-sans xl:py-24 xl:px-24"
+			>
+				<motion.div className="flex flex-row">
+					<div
+						id="project-wrapper"
+						className="flex flex-auto p-4 "
+					></div>
+					<div
+						id="project-title-wrapper"
+						className="w-2/4 flex-auto list-none p-6"
+					>
+						<ul id="left" className="p-6 text-4xl">
+							{projectsData.map((project) => (
+								<motion.li
+									key={project.title}
+									animate={{}}
+									transition={{ duration: 0.2 }}
+									className={
+										project === selectedTab
+											? `${project.color} text-5xl transition-colors`
+											: ''
+									}
+									onClick={() => setSelectedTab(project)}
+								>
+									{`${project.category}`}
+
+									{project === selectedTab ? (
+										<motion.div className={`bg-accent-l`}></motion.div>
+									) : null}
+								</motion.li>
+							))}
+						</ul>
+					</div>
+					<div id="project-content" className="flex w-3/4 p-6">
+						<AnimatePresence mode="wait">
+							<motion.div
+								key={selectedTab ? selectedTab.title : 'empty'}
+								initial={{ y: 10, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								exit={{ y: -10, opacity: 0 }}
+								transition={{ duration: 0.2 }}
+								className="p-6 font-mono text-2xl"
+							>
+								<div className="">
+									<p className="text-fontxl pb-4">
+										{selectedTab ? selectedTab.title : ''}
+									</p>
+									<p className="py-4">
+										{selectedTab ? selectedTab.description : ''}
+									</p>
+									<p className="py-4">{selectedTab ? selectedTab.link : ''}</p>
+									<p>
+										<AiFillGithub />
+									</p>
+								</div>
+							</motion.div>
+						</AnimatePresence>
+					</div>
+				</motion.div>
+			</motion.div>
+		</div>
 	);
 };
 

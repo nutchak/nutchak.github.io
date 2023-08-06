@@ -12,13 +12,13 @@ import styles from '../styles/styles.js';
 const nav = [
 	{
 		name: 'Home',
-		path: '/home',
-		color: 'Illusion',
+		path: '/',
+		color: 'bg-CeruleanBlue',
 	},
 	{
 		name: 'About',
 		path: '/about',
-		color: 'ButterCup',
+		color: 'bg-CaribbeanGreen',
 	},
 	/* {
 		name: 'Education',
@@ -28,12 +28,12 @@ const nav = [
 	{
 		name: 'Projects',
 		path: '/projects',
-		color: 'CaribbeanGreen',
+		color: 'bg-ButterCup',
 	},
 	{
 		name: 'Contact',
 		path: '/contact',
-		color: 'Trinidad',
+		color: 'bg-Trinidad',
 	},
 ];
 
@@ -41,23 +41,58 @@ export default function NavBar() {
 	const [selectedTab, setSelectedTab] = useState(nav[0]);
 
 	return (
-		<motion.nav className="h-1/10 absolute z-50 flex w-full items-center justify-between border-2 border-black bg-white px-32 py-6 font-RobotoMono text-2xl">
-			{nav.map((navItem) => (
-				<NavLink
-					key={navItem.name}
-					to={navItem.path}
-					className={`list-none border-2 border-black shadow-nav xl:px-4 xl:py-2 active:bg-${navItem.color} `}
-					onClick={() => setSelectedTab(navItem)}
-				>
-					<motion.li
-						initial={{ scale: 1 }}
-						whileHover={{ scale: 1.1 }}
-						className={navItem === selectedTab ? `bg-Deco` : ''}
+		<motion.nav className="sticky top-0 z-40 flex h-auto w-full items-center justify-between font-inter text-xl font-bold xl:px-32 xl:py-4">
+			<div className="">
+				<Link to="/" className="inline-flex list-none xl:px-10">
+					<h1 className="">BY NUTCHA</h1>
+				</Link>
+			</div>
+			<div className="">
+				{nav.map((navItem) => (
+					<NavLink
+						key={navItem.name}
+						to={navItem.path}
+						className={`inline-flex list-none xl:px-10 `}
+						onClick={() => setSelectedTab(navItem)}
 					>
-						{navItem.name}
-					</motion.li>
-				</NavLink>
-			))}
+						<motion.li
+							initial={{ scale: 1 }}
+							whileHover={{ scale: 1.1 }}
+							className={navItem === selectedTab ? `${navItem.color}` : ''}
+						>
+							{navItem.name.toUpperCase()}
+						</motion.li>
+					</NavLink>
+				))}
+			</div>
 		</motion.nav>
 	);
 }
+
+/**
+div className="">
+				<Link to="/" className="inline-flex list-none xl:px-10">
+					<h1 className="">BY NUTCHA</h1>
+				</Link>
+			</div>
+			<div className="">
+				{nav.map((navItem) => (
+					<NavLink
+						key={navItem.name}
+						to={navItem.path}
+						className={`inline-flex list-none xl:px-10 `}
+						onClick={() => setSelectedTab(navItem)}
+					>
+						<motion.li
+							initial={{ scale: 1 }}
+							whileHover={{ scale: 1.1 }}
+							className={navItem === selectedTab ? `${navItem.color}` : ''}
+						>
+							{navItem.name.toUpperCase()}
+						</motion.li>
+					</NavLink>
+				))}
+			</div>
+
+
+ */

@@ -2,95 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-family: 'Staatliches', cursive; */
-@font-face {
-	font-family: 'Staatliches';
-	src: url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-}
-
-/* font-family: 'Unbounded', cursive; */
-@font-face {
-	font-family: 'Unbounded';
-	src: url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Abril Fatface', cursive; */
-@font-face {
-	font-family: 'Abril Fatface';
-	src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-}
-
-/* font-family: 'Playfair Display', serif; */
-@font-face {
-	font-family: 'Playfair Display';
-	src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
-}
-
-/* font-family: 'Roboto Slab', serif; */
-@font-face {
-	font-family: 'Roboto Slab';
-	src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Merriweather', serif; */
-@font-face {
-	font-family: 'Merriweather';
-	src: url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-}
-
-/* font-family: 'Noto Serif', serif; */
-@font-face {
-	font-family: 'Noto Serif';
-	src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Inter', sans-serif; */
-@font-face {
-	font-family: 'Inter';
-	src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Work Sans', sans-serif; */
-@font-face {
-	font-family: 'Work Sans';
-	src: url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Nunito Sans', sans-serif; */
-@font-face {
-	font-family: 'Nunito Sans';
-	src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Open Sans', sans-serif; */
-@font-face {
-	font-family: 'Open Sans';
-	src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Roboto Mono', monospace; */
-@font-face {
-	font-family: 'Roboto Mono';
-	src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
-}
-
-/* font-family: 'Space Mono', monospace; */
-@font-face {
-	font-family: 'Space Mono';
-	src: url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-}
-
-/* font-family: 'DM Mono', monospace; */
-@font-face {
-	font-family: 'DM Mono';
-	src: url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-}
-
-/* font-family: 'JetBrains Mono', monospace; */
-@font-face {
-	font-family: 'JetBrains Mono';
-	src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Staatliches&display=swap');
 
 * {
 	scroll-behavior: smooth;
@@ -106,9 +18,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-size: 16px;
+	font-size: 18px;
 	box-sizing: border-box;
-	font-family: 'Roboto Mono', monospace;
 }
 
 li.selected {
@@ -127,3 +38,92 @@ li.selected {
 .selectedNav {
 	color: #ffffff;
 }
+
+/* body {
+	--s: 25vmin;
+	--p: calc(var(--s) / 2);
+	--c1: pink;
+	--c2: dodgerblue;
+	--c3: white;
+	--bg: var(--c3);
+	--d: 4000ms;
+	--e: cubic-bezier(0.76, 0, 0.24, 1);
+
+	background-color: var(--bg);
+	background-image: linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+		linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+		linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+	background-size: var(--s) var(--s);
+	background-position:
+		calc(var(--p) * 1) calc(var(--p) * 0),
+		calc(var(--p) * -1) calc(var(--p) * 1),
+		calc(var(--p) * 1) calc(var(--p) * -1),
+		calc(var(--p) * -1) calc(var(--p) * 0);
+	animation:
+		color var(--d) var(--e) infinite,
+		position var(--d) var(--e) infinite;
+}
+
+@keyframes color {
+	0%,
+	25% {
+		--bg: var(--c3);
+	}
+	26%,
+	50% {
+		--bg: var(--c1);
+	}
+	51%,
+	75% {
+		--bg: var(--c3);
+	}
+	76%,
+	100% {
+		--bg: var(--c2);
+	}
+}
+
+@keyframes position {
+	0% {
+		background-position:
+			calc(var(--p) * 1) calc(var(--p) * 0),
+			calc(var(--p) * -1) calc(var(--p) * 1),
+			calc(var(--p) * 1) calc(var(--p) * -1),
+			calc(var(--p) * -1) calc(var(--p) * 0);
+	}
+	25% {
+		background-position:
+			calc(var(--p) * 1) calc(var(--p) * 4),
+			calc(var(--p) * -1) calc(var(--p) * 5),
+			calc(var(--p) * 1) calc(var(--p) * 3),
+			calc(var(--p) * -1) calc(var(--p) * 4);
+	}
+	50% {
+		background-position:
+			calc(var(--p) * 3) calc(var(--p) * 8),
+			calc(var(--p) * -3) calc(var(--p) * 9),
+			calc(var(--p) * 2) calc(var(--p) * 7),
+			calc(var(--p) * -2) calc(var(--p) * 8);
+	}
+	75% {
+		background-position:
+			calc(var(--p) * 3) calc(var(--p) * 12),
+			calc(var(--p) * -3) calc(var(--p) * 13),
+			calc(var(--p) * 2) calc(var(--p) * 11),
+			calc(var(--p) * -2) calc(var(--p) * 12);
+	}
+	100% {
+		background-position:
+			calc(var(--p) * 5) calc(var(--p) * 16),
+			calc(var(--p) * -5) calc(var(--p) * 17),
+			calc(var(--p) * 5) calc(var(--p) * 15),
+			calc(var(--p) * -5) calc(var(--p) * 16);
+	}
+}
+
+@media (prefers-reduced-motion) {
+	body {
+		animation: none;
+	}
+} */

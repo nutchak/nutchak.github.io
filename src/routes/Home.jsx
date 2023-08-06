@@ -9,45 +9,27 @@ import ContentBox from '../components/ContentBox';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Box from '../components/Box';
 import ReactPlayer from 'react-player';
-import hams from '../assets/hams.mp4';
 
-function Home() {
-	return (
-		/* Background */
-		<AnimatedBackground
+/*
+<AnimatedBackground
 			initial={{ y: '100vh' }}
 			animate={{ y: '0vh' }}
 			exit={{ y: '100vh', opacity: 1 }}
 			className={`${styles.background} bg-Illusion`}
-		>
-			{/* Card */}
+		> 
+
 			<div
 				id="card"
 				className="my-40 flex h-4/5 w-4/5 flex-col items-center justify-center border-2 bg-[#0D6E2F]"
 			>
-				{/* Content box */}
 
 				<div className="grid h-4/5 grid-cols-2 grid-rows-1">
 					<div className="grid grid-cols-1 grid-rows-2">
 						<div className="flex flex-col justify-center lg:px-12">
-							<h2 className="font-mono text-subheading">Hello!</h2>
+							<h2 className="text-subheading font-mono">Hello!</h2>
 							<h1 className="font-RobotoMono text-heading">I'm Nutcha</h1>
 						</div>
-						<p className="text-l align-center">
-							I am a programmer with bachelor's degrees in{' '}
-							<strong>Computer Science</strong> and <strong>Economics</strong>
-							🎉.
-							<br />I <strong>love</strong> Machine Learning and Econometrics.
-							Why, you ask? Well, I love the idea of digging into heaps of data
-							and finding those little golden nuggets of insight that can change
-							the way we see things.
-							<br />
-							Feel free to stick around and check out my portfolio. It's where I
-							showcase how I put my passion and degrees to work to decipher the
-							fascinating stories data has to tell.
-							<br />
-							Enjoy the journey!
-						</p>
+						
 					</div>
 					<div className="flex flex-col items-center justify-center  border-black">
 						<h1 className="font-mono text-4xl">I'm waiting</h1>
@@ -62,6 +44,27 @@ function Home() {
 				</div>
 			</div>
 		</AnimatedBackground>
+
+ */
+
+function Home() {
+	return (
+		<motion.div
+			id="card"
+			className="flex items-center justify-center xl:mx-24 xl:my-36 bg-CeruleanBlue"
+		>
+			<div className="inline-flex  flex-col gap-4 tracking-wider">
+				<div className="">
+					<div className="px-24 py-24 font-sans font-bold">
+						<h2 className="py-8 text-8xl">Hello, I'm</h2>
+						<h2 className="py-8 font-staatliches text-9xl">
+							Nutcha Kiraniphonphan
+						</h2>
+						<h2 className="text-body">I'm a developer.</h2>
+					</div>
+				</div>
+			</div>
+		</motion.div>
 	);
 }
 export default Home;

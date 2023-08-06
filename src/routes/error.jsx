@@ -1,7 +1,7 @@
 import React from 'react';
-import { useRouteError } from 'react-router-dom';
+import { Link, NavLink, useRouteError } from 'react-router-dom';
 
-function Error() {
+export default function Error() {
 	const error = useRouteError();
 	console.error(error);
 
@@ -12,8 +12,7 @@ function Error() {
 			<p>
 				<i>{error.statusText || error.message}</i>
 			</p>
+			{/* <Link to="/">Return to Home</Link> */}
 		</div>
 	);
 }
-
-export default Error;

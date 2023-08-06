@@ -6,12 +6,12 @@ import ContentBox from '../components/ContentBox.jsx';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Card from '../components/Card.jsx';
 import degreeData from '../data/degreeData.js';
-
-function About() {
-	const [selectedTab, setSelectedTab] = useState(degreeData[0]);
+import ReactPlayer from 'react-player';
+import hams from '../assets/hams.mp4';
+/* 
+const [selectedTab, setSelectedTab] = useState(degreeData[0]);
 
 	return (
-		/* Background */
 		<AnimatedBackground
 			initial={{ y: '100vh' }}
 			animate={{ y: '0vh' }}
@@ -32,12 +32,27 @@ function About() {
 								I recently graduated from University of Oslo, with Bachelor
 								degree in Computer Science and Economics.
 							</p>
+							<p className="text-l align-center">
+								I am a programmer with bachelor's degrees in{' '}
+								<strong>Computer Science</strong> and <strong>Economics</strong>
+								🎉.
+								<br />I <strong>love</strong> Machine Learning and Econometrics.
+								Why, you ask? Well, I love the idea of digging into heaps of
+								data and finding those little golden nuggets of insight that can
+								change the way we see things.
+								<br />
+								Feel free to stick around and check out my portfolio. It's where
+								I showcase how I put my passion and degrees to work to decipher
+								the fascinating stories data has to tell.
+								<br />
+								Enjoy the journey!
+							</p>
 							<p>
 								Information about the studies and subjects I took are listed
 								below.
 							</p>
 						</div>
-						<div className='border border-FrenchRose'>
+						<div className="border border-FrenchRose">
 							<nav id="content-nav" className="bg-Deco ">
 								<ul className="m-0 grid grid-cols-2 justify-items-center border-2 border-black p-0">
 									{degreeData.map((degree) => (
@@ -78,6 +93,65 @@ function About() {
 				}
 			/>
 		</AnimatedBackground>
+	);
+
+*/
+
+function About() {
+	return (
+		<div className="flex flex-col items-center justify-center font-sans">
+			<motion.p
+				initial={`text: self-start`}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ duration: 9 }}
+				className="self-end font-staatliches text-9xl"
+			>
+				About me
+			</motion.p>
+			<motion.div
+				id="about-wrapper"
+				className="w-4/5 flex flex-col items-center justify-center bg-CaribbeanGreen font-sans xl:px-24 text-black"
+			>
+				<div className="flex flex-row">
+					<div className="flex flex-col gap-6 text-xl xl:px-24 xl:py-24">
+						<p className="">
+							I am a developer with bachelor's degrees in Computer Science and
+							Economics🎉.
+						</p>
+						<p className="">
+							I'm orginally from Thailand. <br />I moved to Norway in 2011 to
+							study and I've been here ever since!
+						</p>
+						<p className="">I love Machine Learning and Econometrics.</p>
+						<p className="text-3xl">Why, you ask?</p>
+						<p>
+							Well, I love the idea of digging into heaps of data,
+							<br />
+							and finding those little golden nuggets of insight that can change
+							the way we see things.
+						</p>
+						<p className="">
+							Feel free to stick around and check out my portfolio. It's where I
+							showcase how I put my passion and degrees to work to decipher the
+							fascinating stories data has to tell. Enjoy the journey!
+						</p>
+					</div>
+					<div className="flex flex-col items-center justify-center  border-black">
+						<h1 className="font-mono text-4xl">I'm waiting</h1>
+						<ReactPlayer
+							url={hams}
+							playing={true}
+							loop={true}
+							muted={true}
+							playsinline={true}
+						/>
+					</div>
+				</div>
+				<div className='pb-24'>
+					<p className="">Information about the studies Click here.</p>
+				</div>
+			</motion.div>
+		</div>
 	);
 }
 
