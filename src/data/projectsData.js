@@ -19,7 +19,7 @@ const projects = [
 		category: 'Data Sciences',
 		description:
 			'The purpose of the project is to find causal inferences. The data is from the Current Population Survey (CPS) in 2019. The project is written in R. The packages used are dplyr, ggplot2, and KableExtra.',
-		link: 'https://github.com/nutchak/Regression-analysis-of-wage-gap-in-R',
+		link: 'https://nutchak.github.io/causal-inference-wage-gap/',
 		language: 'R' /* TODO: Make the repository readable(?) */,
 		algorithms: [],
 		Tools: ['DataTables', 'ggplot2', 'dplyr', 'KableExtra'],
