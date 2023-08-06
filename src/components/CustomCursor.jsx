@@ -34,10 +34,10 @@ export default function CustomCursor() {
 			backgroundColor: '#F291D0',
 		},
 		text: {
-			height: 150,
-			width: 150,
-			x: mousePosition.x - 75,
-			y: mousePosition.y - 75,
+			height: 48,
+			width: 48,
+			x: mousePosition.x - 24,
+			y: mousePosition.y - 24,
 			mixBlendMode: 'difference',
 		},
 	};

@@ -5,7 +5,7 @@ import styles from '../styles/styles.js';
 
 import ContentBox from '../components/ContentBox.jsx';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { AiFillLinkedin } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 /*
 <AnimatedBackground
@@ -37,13 +37,13 @@ import { AiFillLinkedin } from 'react-icons/ai';
 
 function ContactPage() {
 	return (
-		<div className="flex w-full flex-col items-center justify-center font-sans xl:py-24">
+		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
 			<motion.p className="self-end font-staatliches text-9xl">
 				Contact
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className="w-4/5 flex flex-col items-center justify-center bg-Trinidad py-12 font-sans text-2xl xl:px-24"
+				className="flex w-4/5 flex-col items-center justify-center bg-Trinidad py-12 font-sans text-2xl text-CodGrey xl:px-24"
 			>
 				<div>
 					<h2 className="text-4xl">You can reach me at</h2>
@@ -51,7 +51,18 @@ function ContactPage() {
 				<div className="py-4">
 					<p className="py-4">Phone: +47 91 18 59 89</p>
 					<p className="py-4">Email: nutchakirani@gmail.com</p>
-					<p className="py-4">LinkedIn: www.linkedin.com/in/nutchak</p>
+					<p className="inline-flex gap-4 py-4">
+						<span>
+							<a href="https://www.linkedin.com/in/nutchak">
+								<AiFillLinkedin />
+							</a>
+						</span>
+						<span>
+							<a href="https://github.com/nutchak">
+								<AiFillGithub />
+							</a>
+						</span>
+					</p>
 				</div>
 			</motion.div>
 		</div>

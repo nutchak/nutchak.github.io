@@ -6,7 +6,7 @@ import {
 	AnimateSharedLayout,
 	AnimatePresence,
 } from 'framer-motion';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import styles from '../styles/styles.js';
 
 const nav = [
@@ -38,10 +38,11 @@ const nav = [
 ];
 
 export default function NavBar() {
+	const location = useLocation();
 	const [selectedTab, setSelectedTab] = useState(nav[0]);
 
 	return (
-		<motion.nav className="sticky top-0 z-40 flex h-auto w-full items-center justify-between font-inter text-xl font-bold xl:px-32 xl:py-4">
+		<motion.nav className="sticky top-0 z-40 flex h-auto w-full items-center justify-between font-inter text-xl font-bold xl:px-32 xl:py-4 bg-CodGrey">
 			<div className="">
 				<Link to="/" className="inline-flex list-none xl:px-10">
 					<h1 className="">BY NUTCHA</h1>
@@ -70,6 +71,39 @@ export default function NavBar() {
 }
 
 /**
+ * 
+ * <div className="">
+				<li className="list-none">
+					<a href="/" className="inline-flex list-none xl:px-10">
+						<h1 className="">BY NUTCHA</h1>
+					</a>
+				</li>
+				<Link to="/" className="inline-flex list-none xl:px-10">
+					<h1 className="">BY NUTCHA</h1>
+				</Link>
+			</div>
+			<div className="">
+				{nav.map((navItem) => (
+					<ul className="" >
+						<motion.li
+							initial={{ scale: 1 }}
+							whileHover={{ scale: 1.1 }}
+							className={navItem === selectedTab ? `${navItem.color}` : ''}
+						>
+							<a
+								href={`${navItem.path}`}
+								onClick={() => setSelectedTab(navItem)}
+							>
+								{navItem.name.toUpperCase()}
+							</a>
+						</motion.li>
+					</ul>
+				))}
+			</div>
+ * 
+ */
+
+/**
 div className="">
 				<Link to="/" className="inline-flex list-none xl:px-10">
 					<h1 className="">BY NUTCHA</h1>
@@ -96,3 +130,20 @@ div className="">
 
 
  */
+
+
+				/* <Link
+						key={navItem.name}
+						to={navItem.path}
+						className={`inline-flex list-none xl:px-10 `}
+						onClick={() => setSelectedTab(navItem)}
+					>
+						<motion.li
+							initial={{ scale: 1 }}
+							whileHover={{ scale: 1.1 }}
+							className={navItem === selectedTab ? `${navItem.color}` : ''}
+						>
+							{navItem.name.toUpperCase()}
+						</motion.li>
+					</Link> */
+

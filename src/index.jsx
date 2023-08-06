@@ -8,25 +8,44 @@ import {
 	HashRouter,
 	RouterProvider,
 	createBrowserRouter,
+	Outlet,
 } from 'react-router-dom';
 import Home from './routes/Home';
 import About from './routes/About';
 import Projects from './routes/Projects';
 import Contact from './routes/Contact';
+import Error from './routes/Error';
 
-/* const router = createBrowserRouter([
-	{ path: '/', element: <Home /> },
-	{ path: '/about', element: <About /> },
-	{ path: '/projects', element: <Projects /> },
-	{ path: '/contact', element: <Contact /> },
-]); */
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <App />,
+		errorElement: <Error />,
+		children: [
+			{
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: 'about',
+				element: <About />,
+			},
+			{
+				path: 'projects',
+				element: <Projects />,
+			},
+			{
+				path: 'contact',
+				element: <Contact />,
+			},
+		],
+	},
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+		<RouterProvider router={router} />
 	</React.StrictMode>,
 );
 

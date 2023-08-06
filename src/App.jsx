@@ -5,6 +5,7 @@ import {
 	Routes,
 	useLocation,
 	NavLink,
+	Outlet,
 	BrowserRouter,
 } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -69,17 +70,19 @@ export default function App() {
 	const location = useLocation();
 
 	return (
-		<>
+		<div>
 			<div className="flex w-full flex-col items-center bg-CodGrey text-Concrete">
 				{/* <CustomCursor /> */}
 				<NavBar />
-				<Routes location={location} key={location.key}>
-					<Route index path="/" element={<Home />} />
+				<Outlet />
+				<Footer />
+				{/* <Routes>
+					<Route path="/" element={<Home />} />
 					<Route path="/projects" element={<Projects />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
-				</Routes>
+				</Routes> */}
 			</div>
-		</>
+		</div>
 	);
 }

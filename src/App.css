@@ -6,7 +6,7 @@
   background: #F26363;
   border-radius: 50%;
   position: fixed;
-  z-index: 999999;
+  z-index: 1;
   top: 0;
   left: 0;
 }

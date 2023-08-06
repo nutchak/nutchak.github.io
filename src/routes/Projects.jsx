@@ -9,9 +9,6 @@ import '.././assets/github-mark.svg';
 import ReactPlayer from 'react-player';
 import { AiFillGithub } from 'react-icons/ai';
 
-const colorClassMap = {
-	Deco: 'bg-Deco',
-};
 
 /*
 
@@ -101,7 +98,7 @@ const colorClassMap = {
 const Projects = () => {
 	const [selectedTab, setSelectedTab] = useState(projectsData[0]);
 	return (
-		<div className="flex flex-col items-center justify-center font-sans py-36">
+		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
 			<motion.p
 				initial={`text: self-start`}
 				animate={{ x: 0, opacity: 1 }}
@@ -112,18 +109,11 @@ const Projects = () => {
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className="w-4/5 flex flex-col items-center justify-center bg-ButterCup font-sans xl:py-24 xl:px-24"
+				className="flex w-4/5 flex-col items-center justify-center bg-ButterCup font-sans text-CodGrey xl:px-24 xl:py-12"
 			>
-				<motion.div className="flex flex-row">
-					<div
-						id="project-wrapper"
-						className="flex flex-auto p-4 "
-					></div>
-					<div
-						id="project-title-wrapper"
-						className="w-2/4 flex-auto list-none p-6"
-					>
-						<ul id="left" className="p-6 text-4xl">
+				<motion.div className="flex flex-row gap-8">
+					<div id="project-title-wrapper" className="w-2/4 flex-auto list-none">
+						<ul id="left" className="text-3xl">
 							{projectsData.map((project) => (
 								<motion.li
 									key={project.title}
@@ -136,7 +126,7 @@ const Projects = () => {
 									}
 									onClick={() => setSelectedTab(project)}
 								>
-									{`${project.category}`}
+									<h2>{`${project.category}`}</h2>
 
 									{project === selectedTab ? (
 										<motion.div className={`bg-accent-l`}></motion.div>
@@ -145,7 +135,7 @@ const Projects = () => {
 							))}
 						</ul>
 					</div>
-					<div id="project-content" className="flex w-3/4 p-6">
+					<div id="project-content" className="flex w-3/4">
 						<AnimatePresence mode="wait">
 							<motion.div
 								key={selectedTab ? selectedTab.title : 'empty'}
@@ -153,19 +143,23 @@ const Projects = () => {
 								animate={{ y: 0, opacity: 1 }}
 								exit={{ y: -10, opacity: 0 }}
 								transition={{ duration: 0.2 }}
-								className="p-6 font-mono text-2xl"
+								className="font-mono text-2xl"
 							>
 								<div className="">
-									<p className="text-fontxl pb-4">
+									<h3 className="pb-4 text-3xl">
 										{selectedTab ? selectedTab.title : ''}
-									</p>
-									<p className="py-4">
-										{selectedTab ? selectedTab.description : ''}
-									</p>
-									<p className="py-4">{selectedTab ? selectedTab.link : ''}</p>
-									<p>
-										<AiFillGithub />
-									</p>
+									</h3>
+									<div className="py-4">
+										<p className="">
+											{selectedTab ? selectedTab.description : ''}
+										</p>
+										
+										<p className='pt-8'>
+											<a href={selectedTab.link}>
+												<AiFillGithub />
+											</a>
+										</p>
+									</div>
 								</div>
 							</motion.div>
 						</AnimatePresence>
