@@ -99,7 +99,7 @@ const [selectedTab, setSelectedTab] = useState(degreeData[0]);
 
 function About() {
 	return (
-		<div className="flex flex-col items-center justify-center font-sans">
+		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
 			<motion.p
 				initial={`text: self-start`}
 				animate={{ x: 0, opacity: 1 }}
@@ -110,23 +110,23 @@ function About() {
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className="w-4/5 flex flex-col items-center justify-center bg-CaribbeanGreen font-sans xl:px-24 text-black"
+				className="flex w-4/5 flex-col items-center justify-center bg-CaribbeanGreen font-sans text-black xl:px-24 xl:py-12"
 			>
 				<div className="flex flex-row">
-					<div className="flex flex-col gap-6 text-xl xl:px-24 xl:py-24">
+					<div className="flex flex-col gap-6 text-xl">
 						<p className="">
 							I am a developer with bachelor's degrees in Computer Science and
 							Economics🎉.
 						</p>
 						<p className="">
-							I'm orginally from Thailand. <br />I moved to Norway in 2011 to
+							I'm orginally from Thailand. I moved to Norway in 2011 to
 							study and I've been here ever since!
 						</p>
 						<p className="">I love Machine Learning and Econometrics.</p>
-						<p className="text-3xl">Why, you ask?</p>
+						<p className="text-2xl">Why, you ask?</p>
 						<p>
 							Well, I love the idea of digging into heaps of data,
-							<br />
+							
 							and finding those little golden nuggets of insight that can change
 							the way we see things.
 						</p>
@@ -137,7 +137,7 @@ function About() {
 						</p>
 					</div>
 					<div className="flex flex-col items-center justify-center  border-black">
-						<h1 className="font-mono text-4xl">I'm waiting</h1>
+						<h1 className="font-mono text-4xl">Some cursed hamster</h1>
 						<ReactPlayer
 							url={hams}
 							playing={true}
@@ -147,7 +147,8 @@ function About() {
 						/>
 					</div>
 				</div>
-				<div className='pb-24'>
+				<div className="pt-12">
+					{/* To studies */}
 					<p className="">Information about the studies Click here.</p>
 				</div>
 			</motion.div>

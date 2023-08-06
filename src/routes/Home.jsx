@@ -49,22 +49,31 @@ import ReactPlayer from 'react-player';
 
 function Home() {
 	return (
-		<motion.div
-			id="card"
-			className="flex items-center justify-center xl:mx-24 xl:my-36 bg-CeruleanBlue"
-		>
-			<div className="inline-flex  flex-col gap-4 tracking-wider">
-				<div className="">
-					<div className="px-24 py-24 font-sans font-bold">
-						<h2 className="py-8 text-8xl">Hello, I'm</h2>
-						<h2 className="py-8 font-staatliches text-9xl">
-							Nutcha Kiraniphonphan
-						</h2>
-						<h2 className="text-body">I'm a developer.</h2>
-					</div>
+		<div className="w-full flex flex-col items-center justify-center font-sans xl:pt-12 xl:pb-24">
+			<motion.p
+				initial={`text: self-start`}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ duration: 9 }}
+				className="self-end font-staatliches text-9xl"
+			>
+				Home
+			</motion.p>
+
+			<motion.div
+				id="card"
+				className="flex w-4/5 flex-col items-center justify-center bg-CeruleanBlue font-sans text-Concrete"
+			>
+				<div className="inline-flex  flex-col gap-4 tracking-wider">
+						<div className="px-24 py-24 font-sans font-bold">
+							<h3 className="py-8 text-8xl">Hello, I'm</h3>
+							<h2 className="py-8 font-staatliches text-9xl">
+								Nutcha Kiraniphonphan
+							</h2>
+							<h3 className="text-body">I'm a developer.</h3>
+						</div>
 				</div>
-			</div>
-		</motion.div>
+			</motion.div>
+		</div>
 	);
 }
 export default Home;
