@@ -99,46 +99,45 @@ const [selectedTab, setSelectedTab] = useState(degreeData[0]);
 
 function About() {
 	return (
-		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
+		<div id="about" className={`${styles.container}`}>
 			<motion.p
 				initial={`text: self-start`}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ duration: 9 }}
-				className="self-end font-staatliches text-9xl"
+				className={`${styles.title}`}
 			>
 				About me
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className="flex w-4/5 flex-col items-center justify-center bg-CaribbeanGreen font-sans text-black xl:px-24 xl:py-12"
+				className={`${styles.containerWrapper} bg-CaribbeanGreen font-sans`}
 			>
-				<div className="flex flex-row">
-					<div className="flex flex-col gap-6 text-xl">
-						<p className="">
+				<div className="grid-rows grid lg:grid-cols-3 text-xl text-CodGrey">
+					<div className="lg:col-span-2 ">
+						<p className="py-4">
 							I am a developer with bachelor's degrees in Computer Science and
 							Economics🎉.
 						</p>
-						<p className="">
-							I'm orginally from Thailand. I moved to Norway in 2011 to
-							study and I've been here ever since!
+						<p className="py-4">
+							I'm orginally from Thailand. I moved to Norway in 2011 to study
+							and I've been here ever since!
 						</p>
-						<p className="">I love Machine Learning and Econometrics.</p>
-						<p className="text-2xl">Why, you ask?</p>
-						<p>
-							Well, I love the idea of digging into heaps of data,
-							
-							and finding those little golden nuggets of insight that can change
-							the way we see things.
+						<p className="py-4">I love Machine Learning and Econometrics.</p>
+						<p className="py-4 text-2xl">Why, you ask?</p>
+						<p className="py-4">
+							Well, I love the idea of digging into heaps of data, and finding
+							those little golden nuggets of insight that can change the way we
+							see things.
 						</p>
-						<p className="">
+						<p className="py-4">
 							Feel free to stick around and check out my portfolio. It's where I
 							showcase how I put my passion and degrees to work to decipher the
 							fascinating stories data has to tell. Enjoy the journey!
 						</p>
 					</div>
-					<div className="flex flex-col items-center justify-center  border-black">
-						<h1 className="font-mono text-4xl">Some cursed hamster</h1>
-						<ReactPlayer
+					<div className="flex flex-col items-center justify-center">
+						<h1 className="font-mono text-2xl py-4">Some cursed hamster</h1>
+						<ReactPlayer 
 							url={hams}
 							playing={true}
 							loop={true}
@@ -147,9 +146,11 @@ function About() {
 						/>
 					</div>
 				</div>
-				<div className="pt-12">
+				<div className="place-self-center">
 					{/* To studies */}
-					<p className="">Information about the studies Click here.</p>
+					<p className="text-xl">
+						Information about the studies 👉 <span>Click here</span>
+					</p>
 				</div>
 			</motion.div>
 		</div>

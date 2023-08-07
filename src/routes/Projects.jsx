@@ -98,22 +98,22 @@ import { AiFillGithub } from 'react-icons/ai';
 const Projects = () => {
 	const [selectedTab, setSelectedTab] = useState(projectsData[0]);
 	return (
-		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
+		<div id="projects" className={`${styles.container}`}>
 			<motion.p
 				initial={`text: self-start`}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ duration: 9 }}
-				className="self-end font-staatliches text-9xl"
+				className={`${styles.title}`}
 			>
 				Projects
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className="flex w-4/5 flex-col items-center justify-center bg-ButterCup font-sans text-CodGrey xl:px-24 xl:py-12"
+				className={`${styles.containerWrapper} bg-ButterCup `}
 			>
-				<motion.div className="flex flex-row gap-8">
+				<motion.div className="flex flex-col gap-8 lg:flex-row">
 					<div id="project-title-wrapper" className="w-2/4 flex-auto list-none">
-						<ul id="left" className="text-3xl">
+						<ul id="left" className="text-2xl lg:text-3xl">
 							{projectsData.map((project) => (
 								<motion.li
 									key={project.title}
@@ -121,12 +121,12 @@ const Projects = () => {
 									transition={{ duration: 0.2 }}
 									className={
 										project === selectedTab
-											? `${project.color} text-5xl transition-colors`
+											? `${project.color} text-3xl transition-colors lg:text-5xl`
 											: ''
 									}
 									onClick={() => setSelectedTab(project)}
 								>
-									<h2>{`${project.category}`}</h2>
+									<h2 className="py-2">{`${project.category}`}</h2>
 
 									{project === selectedTab ? (
 										<motion.div className={`bg-accent-l`}></motion.div>
@@ -135,7 +135,7 @@ const Projects = () => {
 							))}
 						</ul>
 					</div>
-					<div id="project-content" className="flex w-3/4">
+					<div id="project-content" className="flex  w-3/4">
 						<AnimatePresence mode="wait">
 							<motion.div
 								key={selectedTab ? selectedTab.title : 'empty'}
@@ -146,15 +146,15 @@ const Projects = () => {
 								className="font-mono text-2xl"
 							>
 								<div className="">
-									<h3 className="pb-4 text-3xl">
+									<h3 className="pb-4 text-2xl lg:text-3xl">
 										{selectedTab ? selectedTab.title : ''}
 									</h3>
-									<div className="py-4">
+									<div className="min-h-max py-4 text-base lg:text-xl">
 										<p className="">
 											{selectedTab ? selectedTab.description : ''}
 										</p>
-										
-										<p className='pt-8'>
+
+										<p className="pt-8">
 											<a href={selectedTab.link}>
 												<AiFillGithub />
 											</a>

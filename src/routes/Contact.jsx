@@ -1,5 +1,5 @@
 import { circOut, motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card.jsx';
 import styles from '../styles/styles.js';
 
@@ -34,35 +34,46 @@ import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 		</AnimatedBackground>
 
 */
+function scrollToSection(id) {
+	const element = document.getElementById(id);
+	if (element) {
+		element.scrollIntoView({ behavior: 'smooth' });
+	} else {
+		console.error(`Element with ID ${id} not found`);
+	}
+}
 
 function ContactPage() {
+	/* useEffect(() => {
+		scrollToSection('contact');
+	}, []); */
 	return (
-		<div className="flex w-full flex-col items-center justify-center font-sans xl:pb-24 xl:pt-12">
-			<motion.p className="self-end font-staatliches text-9xl">
-				Contact
-			</motion.p>
+		<div id="contact" className={`${styles.container}`}>
+			<motion.p className={`${styles.title}`}>Contact</motion.p>
 			<motion.div
-				id="about-wrapper"
-				className="flex w-4/5 flex-col items-center justify-center bg-Trinidad py-12 font-sans text-2xl text-CodGrey xl:px-24"
+				id="contact-wrapper"
+				className={`${styles.containerWrapper} bg-Trinidad`}
 			>
-				<div>
-					<h2 className="text-4xl">You can reach me at</h2>
-				</div>
-				<div className="py-4">
-					<p className="py-4">Phone: +47 91 18 59 89</p>
-					<p className="py-4">Email: nutchakirani@gmail.com</p>
-					<p className="inline-flex gap-4 py-4">
-						<span>
-							<a href="https://www.linkedin.com/in/nutchak">
-								<AiFillLinkedin />
-							</a>
-						</span>
-						<span>
-							<a href="https://github.com/nutchak">
-								<AiFillGithub />
-							</a>
-						</span>
-					</p>
+				<div className='flex flex-col justify-center items-center'>
+					<div>
+						<h2 className="text-3xl font-bold ">You can reach me at</h2>
+					</div>
+					<div className="py-4">
+						<p className="py-4">Phone: +47 91 18 59 89</p>
+						<p className="py-4">Email: nutchakirani@gmail.com</p>
+						<p className="inline-flex gap-4 py-4">
+							<span>
+								<a href="https://www.linkedin.com/in/nutchak">
+									<AiFillLinkedin />
+								</a>
+							</span>
+							<span>
+								<a href="https://github.com/nutchak">
+									<AiFillGithub />
+								</a>
+							</span>
+						</p>
+					</div>
 				</div>
 			</motion.div>
 		</div>

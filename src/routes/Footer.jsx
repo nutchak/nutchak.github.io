@@ -3,8 +3,8 @@ import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 
 export function Footer() {
 	return (
-		<div className="sticky top-0 z-40 flex h-auto w-full items-center justify-between border-t-2 border-Concrete font-inter text-xl font-bold xl:px-32 xl:py-4">
-			<div className="flex flex-col gap-4 tracking-wider">
+		<div className="sticky top-0 z-40 flex h-auto w-full items-center  justify-between border-t-2 border-Concrete px-16 py-4 font-inter text-xl font-bold lg:px-32">
+			<div className="flex max-w-5xl flex-col gap-4 tracking-wider">
 				<div className="pb-4">
 					<h2 className="text-m">Nutcha Kiraniphonphan</h2>
 				</div>

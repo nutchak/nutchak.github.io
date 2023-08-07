@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { circOut, motion, useScroll } from 'framer-motion';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Header';
 import Layout from '../components/Layout';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
@@ -47,31 +47,41 @@ import ReactPlayer from 'react-player';
 
  */
 
+function scrollToSection(id) {
+	const element = document.getElementById(id);
+	if (element) {
+		element.scrollIntoView({ behavior: 'smooth' });
+	}
+}
+
 function Home() {
+	useEffect(() => {
+		scrollToSection('home');
+	}, []);
 	return (
-		<div className="w-full flex flex-col items-center justify-center font-sans xl:pt-12 xl:pb-24">
+		<div id="home" className={`${styles.container} pt-8`}>
 			<motion.p
-				initial={`text: self-start`}
+				initial={false}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ duration: 9 }}
-				className="self-end font-staatliches text-9xl"
+				className={`${styles.title}`}
 			>
 				Home
 			</motion.p>
 
 			<motion.div
-				id="card"
-				className="flex w-4/5 flex-col items-center justify-center bg-CeruleanBlue font-sans text-Concrete"
+				id="container"
+				className={`${styles.containerWrapper} bg-CeruleanBlue`}
 			>
-				<div className="inline-flex  flex-col gap-4 tracking-wider">
-						<div className="px-24 py-24 font-sans font-bold">
-							<h3 className="py-8 text-8xl">Hello, I'm</h3>
-							<h2 className="py-8 font-staatliches text-9xl">
-								Nutcha Kiraniphonphan
-							</h2>
-							<h3 className="text-body">I'm a developer.</h3>
-						</div>
-				</div>
+				{/* <div className="inline-flex  flex-col gap-4 tracking-wider">
+					<div className="px-24 py-24 font-sans font-bold"> */}
+				<h3 className="sm:text-3xl lg:text-6xl lg:py-2">Hello, I'm</h3>
+				<h2 className="font-staatliches lg:text-8xl sm:text-4xl py-4 text-text-d hover:text-accent-d">
+					Nutcha Kiraniphonphan
+				</h2>
+				<h3 className="text-body">I'm a developer.</h3>
+				{/* </div>
+				</div> */}
 			</motion.div>
 		</div>
 	);

@@ -1,10 +1,10 @@
 import React from 'react';
-import NavBar from './NavBar';
+import NavBar from './Header';
 import { motion } from 'framer-motion';
 
 function Layout({ children }) {
 	return (
-		<div className="flex h-screen w-screen flex-col justify-center items-center">
+		<div className="flex h-screen w-screen flex-col items-center justify-center">
 			{/* Navbar */}
 			<nav className="">
 				<NavBar />

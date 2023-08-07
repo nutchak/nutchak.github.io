@@ -93,14 +93,7 @@ module.exports = {
 				'accent-d': '#faa899',
 				*/
 			},
-			screens: {
-				xs: '480px' /* Mobile */,
-				ss: '620px',
-				sm: '768px' /* Tablet -> */,
-				md: '1060px' /* Desktop */,
-				lg: '1200px',
-				xl: '1700px',
-			},
+			
 			fontSize: {
 				title: '2rem',
 				body: '1rem',
