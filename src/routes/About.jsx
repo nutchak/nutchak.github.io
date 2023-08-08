@@ -110,11 +110,11 @@ function About() {
 			</motion.p>
 			<motion.div
 				id="about-wrapper"
-				className={`${styles.containerWrapper} bg-CaribbeanGreen font-sans`}
+				className={`${styles.containerWrapper} bg-CaribbeanGreen`}
 			>
-				<div className="grid-rows grid lg:grid-cols-3 text-xl text-CodGrey">
-					<div className="lg:col-span-2 ">
-						<p className="py-4">
+				<div className="flex flex-col lg:grid-rows lg:grid lg:grid-cols-2 text-xl text-CodGrey">
+					<div className="">
+						<p className="pb-4">
 							I am a developer with bachelor's degrees in Computer Science and
 							Economics🎉.
 						</p>
@@ -148,7 +148,7 @@ function About() {
 				</div>
 				<div className="place-self-center">
 					{/* To studies */}
-					<p className="text-xl">
+					<p className="text-2xl">
 						Information about the studies 👉 <span>Click here</span>
 					</p>
 				</div>

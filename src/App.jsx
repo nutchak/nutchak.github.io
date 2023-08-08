@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Route,
@@ -7,7 +7,7 @@ import {
 	createBrowserRouter,
 	RouterProvider,
 } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useInView } from 'framer-motion';
 import './App.css';
 import Home from './routes/Home';
 import Projects from './routes/Projects';
@@ -34,14 +34,46 @@ function LocationProvider({ children }) {
 		</BackgroundColorProvider>
  */
 
+function Section({ children }) {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: false });
+
+	return (
+		<section ref={ref}>
+			<span
+				style={{
+					transform: isInView ? 'none' : 'translateX(-200px)',
+					opacity: isInView ? 1 : 0,
+					transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+				}}
+			>
+				{children}
+			</span>
+		</section>
+	);
+}
+
+
 function App() {
 	return (
 		<div className="grid w-full grid-cols-1 items-center bg-background-d text-Concrete">
 			<Header />
-			<Home />
-			<About />
-			<Projects />
-			<Contact />
+			<Section>
+				<Home />
+			</Section>
+
+			<Section>
+				<About />
+			</Section>
+
+			<Section>
+				<Projects />
+			</Section>
+
+			<Section>
+				<Contact />
+			</Section>
+
 			<Footer />
 		</div>
 	);
