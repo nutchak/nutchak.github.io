@@ -47,41 +47,28 @@ import ReactPlayer from 'react-player';
 
  */
 
-function scrollToSection(id) {
-	const element = document.getElementById(id);
-	if (element) {
-		element.scrollIntoView({ behavior: 'smooth' });
-	}
-}
-
 function Home() {
-	useEffect(() => {
-		scrollToSection('home');
-	}, []);
 	return (
-		<div id="home" className={`${styles.container} pt-8`}>
+		<div id="home" className={`${styles.container} pt-12 lg:pt-16`}>
 			<motion.p
-				initial={false}
+				initial={{ x: 0, opacity: 1 }}
 				animate={{ x: 0, opacity: 1 }}
-				transition={{ duration: 9 }}
+				transition={{ duration: 0.5, ease: circOut}}
 				className={`${styles.title}`}
 			>
 				Home
 			</motion.p>
-
 			<motion.div
 				id="container"
 				className={`${styles.containerWrapper} bg-CeruleanBlue`}
 			>
 				{/* <div className="inline-flex  flex-col gap-4 tracking-wider">
 					<div className="px-24 py-24 font-sans font-bold"> */}
-				<h3 className="sm:text-3xl lg:text-6xl lg:py-2">Hello, I'm</h3>
-				<h2 className="font-staatliches lg:text-8xl sm:text-4xl py-4 text-text-d hover:text-accent-d">
+				<h3 className="text-3xl ">Hello, I'm</h3>
+				<h2 className="py-4 font-staatliches text-5xl text-text-d lg:text-9xl">
 					Nutcha Kiraniphonphan
 				</h2>
-				<h3 className="text-body">I'm a developer.</h3>
-				{/* </div>
-				</div> */}
+				<h3 className="text-base ">I'm a developer.</h3>
 			</motion.div>
 		</div>
 	);

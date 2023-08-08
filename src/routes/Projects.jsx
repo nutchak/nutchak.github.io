@@ -5,7 +5,6 @@ import styles from '../styles/styles.js';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Card from '../components/Card.jsx';
 import '../App.css';
-import '.././assets/github-mark.svg';
 import ReactPlayer from 'react-player';
 import { AiFillGithub } from 'react-icons/ai';
 

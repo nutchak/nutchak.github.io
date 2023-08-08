@@ -2,9 +2,9 @@ const styles = {
 	container:
 		'grid h-auto w-full grid-cols-1 font-sans pb-16 lg:pb-24',
 	title:
-		'justify-self-center md:justify-self-end font-staatliches text-7xl md:text-9xl p-4',
+		'justify-self-end font-staatliches text-8xl lg:text-9xl p-4',
 	containerWrapper:
-		'flex w-4/5 flex-col justify-self-center font-sans text-Concrete py-24 px-16 gap-8',
+		'flex w-4/5 flex-col justify-self-center font-sans text-Concrete py-24 px-16 gap-8 max-w-7xl',
 
 	page: 'flex items-center justify-center mx-24 my-36',
 
