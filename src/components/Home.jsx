@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { circOut, motion, useScroll } from 'framer-motion';
-import NavBar from '../components/Header';
-import Layout from '../components/Layout';
+import NavBar from './Header';
+import Layout from './Layout';
 import routeVariants from '../styles/variants.js';
 import styles from '../styles/styles.js';
-import ContentBox from '../components/ContentBox';
-import AnimatedBackground from '../components/AnimatedBackground';
-import Box from '../components/Box';
+import ContentBox from './ContentBox';
+import AnimatedBackground from './AnimatedBackground';
+import Box from './Box';
 import ReactPlayer from 'react-player';
 
 /*

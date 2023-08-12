@@ -15,10 +15,10 @@ const projects = [
 	},
 	{
 		title:
-			'Causal inference of Real wage gaps between immigrants and non-immigrants in the United States in 2019.',
+			'Causal inference of the "real wage" gap between immigrants and non-immigrants in the United States.',
 		category: 'Data Sciences',
 		description:
-			'The purpose of the project is to find causal inferences. The data is from the Current Population Survey (CPS) in 2019. The project is written in R. The packages used are dplyr, ggplot2, and KableExtra.',
+			'The aim of the project was to identify causal relationships leading to wage gaps between immigrants and non-immigrants in the data from the 2019 Current Population Survey (CPS). The project is written in R, using the packages dplyr, ggplot2, and KableExtra.',
 		link: 'https://nutchak.github.io/causal-inference-wage-gap/',
 		language: 'R' /* TODO: Make the repository readable(?) */,
 		algorithms: [],
@@ -29,7 +29,8 @@ const projects = [
 		title: 'My personal website',
 		category: 'Web Development',
 		description: [
-			'The framework chosen for this project is React. The website is hosted on GitHub Pages. The code is written in JavaScript, HTML, and CSS. The website is responsive.(?)',
+			'You are looking at it: My personal website!',
+			'I chose to use the React framework to make this website, and to host it on GitHub Pages. In this project I have written JavaScript, HTML, and CSS with the goal of making a responsive web page. The project is documented in this README.md.',
 			'The documentation of the web development is in the README.md',
 		],
 		link: 'https://github.com/nutchak/nutchak.github.io',

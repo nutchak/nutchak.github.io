@@ -1,21 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {
-	BrowserRouter as Router,
-	Route,
-	useLocation,
-	createRoutesFromElements,
-	createBrowserRouter,
-	RouterProvider,
-} from 'react-router-dom';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import './App.css';
-import Home from './routes/Home';
-import Projects from './routes/Projects';
-import About from './routes/About';
-import Contact from './routes/Contact';
-import NavBar from './components/Header';
-import { Footer } from './routes/Footer';
 import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import { Footer } from './components/Footer';
 
 function LocationProvider({ children }) {
 	return <AnimatePresence>{children}</AnimatePresence>;
@@ -36,23 +27,19 @@ function LocationProvider({ children }) {
 
 function Section({ children }) {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: false });
+	const isInView = useInView(ref, { once: true });
 
 	return (
-		<section ref={ref}>
-			<span
-				style={{
-					transform: isInView ? 'none' : 'translateX(-200px)',
-					opacity: isInView ? 1 : 0,
-					transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-				}}
-			>
+		<motion.section ref={ref}
+		initial={{ opacity: 0 }}
+		animate={{ translateY: isInView ? 0 : 100, opacity: isInView ? 1 : 0}}
+		transition={{ duration: 1}}>
+
 				{children}
-			</span>
-		</section>
+
+		</motion.section>
 	);
 }
-
 
 function App() {
 	return (

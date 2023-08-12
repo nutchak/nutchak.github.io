@@ -1,10 +1,10 @@
 import { circOut, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import Card from '../components/Card.jsx';
+import Card from './Card.jsx';
 import styles from '../styles/styles.js';
 
-import ContentBox from '../components/ContentBox.jsx';
-import AnimatedBackground from '../components/AnimatedBackground';
+import ContentBox from './ContentBox.jsx';
+import AnimatedBackground from './AnimatedBackground.jsx';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 /*
@@ -54,7 +54,7 @@ function ContactPage() {
 				id="contact-wrapper"
 				className={`${styles.containerWrapper} bg-Trinidad`}
 			>
-				<div className='flex flex-col justify-center items-center'>
+				<div className="flex flex-col items-center justify-center">
 					<div>
 						<h2 className="text-3xl font-bold ">You can reach me at</h2>
 					</div>

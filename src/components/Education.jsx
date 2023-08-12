@@ -1,9 +1,9 @@
 import React from 'react';
 import { circOut, motion } from 'framer-motion';
 import styles from '../styles/styles.js';
-import ContentBox from '../components/ContentBox';
-import AnimatedBackground from '../components/AnimatedBackground';
-import Card from '../components/Card';
+import ContentBox from './ContentBox.jsx';
+import AnimatedBackground from './AnimatedBackground.jsx';
+import Card from './Card.jsx';
 
 const Education = () => {
 	return (

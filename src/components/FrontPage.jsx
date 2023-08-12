@@ -8,9 +8,9 @@ import {
 } from 'framer-motion';
 import AnimatedTextWord from '../scripts/AnimatedTextWord';
 import AnimatedTextCharacter from '../scripts/AnimatedTextCharacter';
-import Button from '../components/Button';
-import Card from '../components/Card';
-import AnimatedBackground from '../components/AnimatedBackground';
+import Button from './Button';
+import Card from './Card';
+import AnimatedBackground from './AnimatedBackground';
 
 function FrontPage() {
 	const isPresent = useIsPresent();

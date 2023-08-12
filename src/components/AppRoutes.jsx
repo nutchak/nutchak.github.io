@@ -7,5 +7,4 @@ import About from './About';
 import Error from './Error';
 import Root from './Root';
 
-
 export { FrontPage, Home, Education, Projects, Contact, About, Error, Root };
