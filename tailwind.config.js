@@ -2,6 +2,11 @@
 module.exports = {
 	content: ['./public/index.html', './src/**/*.{js,jsx,ts,tsx,html}'],
 	theme: {
+		screens: {
+			sm: '576px',
+			md: '768px',
+			lg: '1024px',
+		},
 		extend: {
 			colors: {
 				/* 1 */
@@ -93,7 +98,7 @@ module.exports = {
 				'accent-d': '#faa899',
 				*/
 			},
-			
+
 			fontSize: {
 				title: '2rem',
 				body: '1rem',

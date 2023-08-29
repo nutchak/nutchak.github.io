@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-
 /**
  * Custom cursor component
  * When hovering over a link, the cursor will change color
- * 
+ *
  * @returns {JSX.Element}
  */
 export default function CustomCursor() {
@@ -29,15 +28,17 @@ export default function CustomCursor() {
 
 	const variants = {
 		default: {
-			x: mousePosition.x - 16,
-			y: mousePosition.y - 16,
-			backgroundColor: '#F291D0',
+			height: 100,
+			width: 100,
+			x: mousePosition.x - 50,
+			y: mousePosition.y - 50,
+			mixBlendMode: 'difference',
 		},
 		text: {
-			height: 48,
-			width: 48,
-			x: mousePosition.x - 24,
-			y: mousePosition.y - 24,
+			height: 100,
+			width: 100,
+			x: mousePosition.x - 50,
+			y: mousePosition.y - 50,
 			mixBlendMode: 'difference',
 		},
 	};

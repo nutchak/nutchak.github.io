@@ -68,6 +68,14 @@ export default function Hero() {
 	const text = 'Hello, World!';
 	const letters = text.split('');
 
+	const handleClickScroll = () => {
+		const element = document.getElementById('home');
+		if (element) {
+			element.scrollTo({
+				behavior: 'smooth'
+			});
+		}}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -88,9 +96,9 @@ export default function Hero() {
 				whileHover={{ scale: 1.2 }}
 				className={`bg-Deco p-4`}
 			>
-
+				<a href='#home'>
 					<p className={`text-5xl`}>Let's go!</p>
-
+				</a>
 			</motion.button>
 		</motion.div>
 	);

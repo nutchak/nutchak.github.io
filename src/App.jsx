@@ -7,6 +7,9 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { Footer } from './components/Footer';
+import NewProjects  from './components/NewProjects';
+import CustomCursor from './components/CustomCursor';
+import Hero from './components/Hero';
 
 function LocationProvider({ children }) {
 	return <AnimatePresence>{children}</AnimatePresence>;
@@ -44,6 +47,8 @@ function Section({ children }) {
 function App() {
 	return (
 		<div className="grid w-full grid-cols-1 items-center bg-background-d text-Concrete">
+			{/* <CustomCursor /> */}
+			{/* <Hero /> */}
 			<Header />
 			<Section>
 				<Home />

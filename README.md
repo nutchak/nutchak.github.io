@@ -1,52 +1,51 @@
 # Documentation for nutchak.github.io
 
-
 ## Table of Contents
+
 - [Project Overview](#project-overview)
-- [Logs](#logs)
+  - [The goal](#the-goal)
+  - [Site maps](#site-maps)
+  - [Framework](#framework)
 
 ## Project Overview
 
 ### The goal
 
-The goal of this project is to create a personal website where projects can be showed. The website is hosted on GitHub Pages. 
-
-### Objectives
+The goal of this project is to create a personal website where projects can be showed. The website is hosted on GitHub Pages.
+The site should be simple and easy to navigate.
+The design should be clean and simple.
 
 ### Site maps
 
-Front page
-|- Home page
-|- Education
-|- Projects
-    |- Data analysis
-    |- Machine learning
-    |- Web development (this one!)
-    |- Lisp interpreter
-|- About
-|- Contact
+- Home
+- About
+- Projects
+  - Data analysis (causal inference of real wage)
+  - Machine learning (travelling salesman problem with genetic algorithm)
+  - Web development (this one!)
+  - Lisp interpreter
+- Contact
 
 ### Framework
 
-React is the most suitable framework for this projects.
+React is chosen as a framework.
 The languages used are HTML, CSS and JavaScript.
 UI framework is Tailwind CSS.
 Framer Motion is used for animations.
+VS Code is used as the IDE.
 
-## Logs
+### Reflection
 
+- Spent too much time on the design, i.e., fonts, colors, etc.
+- The site is not developed with mobile first in mind (learnt this the hard way 🥲).
+  - Default sm of Tailwind CSS is not small enough. Changed from 640px to 576px.
+- Centering the div.
 
-### 28.07.2023
+### Further development
 
-
-
-### 01.08.2023
-
-The Contact page only shows social media links.
-Contact form could be added later when I learn how to do it properly and securely.
-
-### 02.08.2023
-
-The Education page is removed. The information is moved to the About page.
-
----
+1. Double check the responsiveness.
+2. Hero section.
+3. Remake the navigation.
+4. Better page transitions.
+5. Add more projects.
+6. Redo the design.

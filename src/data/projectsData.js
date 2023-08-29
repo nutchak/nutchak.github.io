@@ -30,7 +30,7 @@ const projects = [
 		category: 'Web Development',
 		description: [
 			'You are looking at it: My personal website!',
-			'I chose to use the React framework to make this website, and to host it on GitHub Pages. In this project I have written JavaScript, HTML, and CSS with the goal of making a responsive web page. The project is documented in this README.md.',
+			'I chose to use the React framework to make this website, and to host it on GitHub Pages. In this project I have written JavaScript, HTML, and CSS with the goal of making a responsive web page.',
 			'The documentation of the web development is in the README.md',
 		],
 		link: 'https://github.com/nutchak/nutchak.github.io',
