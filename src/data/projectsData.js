@@ -7,7 +7,7 @@ const projects = [
 			' Genetic algorithm is also implemented to solve the problem with different approaches.',
 			' The code is written in Python. Pandas is used to handle dataframes. Matplotlib is used to plot the results.',
 		],
-		link: 'https://github.com/nutchak/travelling-salesman-problem.git' /* TODO: Create repository for this projects */,
+		link: 'https://github.com/nutchak/travelling-salesman-evolutionary-algorithm' /* TODO: Create repository for this projects */,
 		language: 'Python',
 		algorithms: ['Exhausive search', 'Hill climbing'],
 		Tools: ['Pandas', 'Matplotlib'],
