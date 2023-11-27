@@ -21,7 +21,7 @@ function Home() {
 				<h2 className="py-4 font-staatliches text-4xl text-text-d lg:text-9xl">
 					Nutcha Kiraniphonphan
 				</h2>
-				<h3 className="text-base">An inspiring developer✨</h3>
+				<h3 className="text-base">an inspiring developer✨</h3>
 			</motion.div>
 		</div>
 	);

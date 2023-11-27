@@ -20,20 +20,21 @@ function About() {
 			>
 				<div className="lg:grid-rows flex flex-col text-xl text-CodGrey lg:grid lg:grid-cols-2">
 					<div className="">
-						<p className="pb-4">
-							I am a developer with bachelor's degrees in Computer Science and
-							Economics🎉.
-						</p>
-						<p className="py-4">
-							I'm orginally from Thailand. I moved to Norway in 2011 to study
-							and I've been here ever since!
-						</p>
-						<p className="py-4">I love Machine Learning and Econometrics.</p>
+						<p className="pb-4">I love Machine Learning and Econometrics.</p>
 						<p className="py-4 text-2xl">Why, you ask?</p>
 						<p className="py-4">
 							Well, I love the idea of digging into heaps of data, and finding
 							those little golden nuggets of insight that can change the way we
 							see things.
+						</p>
+						<p className="py-4 text-2xl">Wait! That's not all!</p>
+						<p className="py-4">
+							I also love backend, frontend, data engineering, and the list goes
+							on and on!
+						</p>
+						<p className="py-4">
+							Let me introduce myself first. I am a developer with two bachelor's degrees in Computer Science and
+							Economics from University of Oslo.
 						</p>
 						<p className="py-4">
 							Feel free to stick around and check out my portfolio. It's where I
